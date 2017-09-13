@@ -20,6 +20,6 @@ h2{
   font-size: 3vw;
 }
 
-#show:hover{
+#show:active{
   color: #730202;
 }

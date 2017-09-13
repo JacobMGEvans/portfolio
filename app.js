@@ -21,6 +21,7 @@ $('.fa-bars').click(function(){
 $('#projects').text(projectArr[0].name)
 $('.projectsAnchor').attr('href', projectArr[0].url);
 
+//jquery clone after grab of .template of the div
 //Use the prototype for the template stuff
 // Projects.prototype.toHtml = function () {
 //   if(this.url){

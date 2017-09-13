@@ -29,7 +29,7 @@ h2{
 .hide {
   display: none;
 }
-.biographySections {
+.template {
   text-align: center;
 }
 }
@@ -43,7 +43,7 @@ h2{
   display: block;
 }
 
-.biographySections {
+.template {
   text-align: center;
   position: relative;
   bottom: 35vw;

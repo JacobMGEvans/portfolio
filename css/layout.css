@@ -20,3 +20,21 @@ h2{
   position: relative;
   left: 17vw;
 }
+
+@media only screen (max-width: 500px) {
+.hide {
+  display: none;
+}
+.biographySections {
+  text-align: center;
+}
+}
+
+@media all (min-width: 800px) {
+  .fa-bars {
+    display: none;
+  }
+.biographySections {
+  text-align: center;
+}
+}

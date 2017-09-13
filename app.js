@@ -11,8 +11,10 @@ function Projects(name, url) {
 new Projects ('Bus Mall', 'https://github.com/Cloud887/bus-mall');
 new Projects ('Tennis Anyone', 'https://github.com/Cloud887/tennis_anyone');
 
-$(document).ready(function() {
-  $('.fa fa-bars').click(function() {
-    $('.fa fa-bars').css('display', 'none');
-  })
+
+$('.fa-bars').click(function(){
+  $('.navbars').css('display', 'block');
 })
+
+$('#projects').text(project[0].name)
+$('.projectsAnchor').attr('href', project[0].url);

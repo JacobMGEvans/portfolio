@@ -35,9 +35,14 @@ h2{
 }
 
 @media only screen and (min-width: 800px) {
-  .fa-bars {
-    display: none;
-  }
+.fa-bars {
+  display: none;
+}
+
+.hide {
+  display: block;
+}
+
 .biographySections {
   text-align: center;
   position: relative;

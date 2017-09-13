@@ -19,3 +19,7 @@ h2{
 #show{
   font-size: 3vw;
 }
+
+#show:hover{
+  color: #730202;
+}

@@ -1,20 +1,29 @@
 'use strict';
 
-var project = [];
+var projectArr = [], educationArr = [], awardsArr = [];
 
-function Projects(name, url) {
-  this.name = name;
-  this.url = url;
-  project.push(this);
+function Projects(projectDataSource) {
+  Object.assign(this, projectDataSource)
 }
 
-new Projects ('Bus Mall', 'https://github.com/Cloud887/bus-mall');
-new Projects ('Tennis Anyone', 'https://github.com/Cloud887/tennis_anyone');
-
+dataSource.forEach(function(rawData) {
+  if(rawData.url){
+    projectArr.push(new Projects(rawData))
+  }else {
+    educationArr.push(new Projects(rawData))
+  }
+})
 
 $('.fa-bars').click(function(){
   $('.hide').css('display', 'block');
 })
 
-$('#projects').text(project[0].name)
-$('.projectsAnchor').attr('href', project[0].url);
+$('#projects').text(projectArr[0].name)
+$('.projectsAnchor').attr('href', projectArr[0].url);
+
+//Use the prototype for the template stuff
+// Projects.prototype.toHtml = function () {
+//   if(this.url){
+//
+//   }
+// };

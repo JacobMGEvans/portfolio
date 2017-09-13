@@ -21,7 +21,11 @@ h2{
   left: 17vw;
 }
 
-@media only screen (max-width: 500px) {
+@media only screen {
+#show{
+  position: relative;
+  left: 1vw;
+}
 .hide {
   display: none;
 }
@@ -30,11 +34,13 @@ h2{
 }
 }
 
-@media all (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .fa-bars {
     display: none;
   }
 .biographySections {
   text-align: center;
+  position: relative;
+  bottom: 35vw;
 }
 }

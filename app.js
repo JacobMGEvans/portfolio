@@ -13,7 +13,7 @@ new Projects ('Tennis Anyone', 'https://github.com/Cloud887/tennis_anyone');
 
 
 $('.fa-bars').click(function(){
-  $('.navbars').css('display', 'block');
+  $('.hide').css('display', 'block');
 })
 
 $('#projects').text(project[0].name)

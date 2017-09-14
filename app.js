@@ -28,3 +28,5 @@ $('.projectsAnchor').attr('href', projectArr[0].url);
 //
 //   }
 // };
+
+//No changes

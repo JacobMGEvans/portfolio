@@ -9,24 +9,17 @@ function Projects(projectDataSource) {
 dataSource.forEach(function(rawData) {
   if(rawData.url){
     projectArr.push(new Projects(rawData))
-  }else {
-    educationArr.push(new Projects(rawData))
+    var projectRender = `<a href= '${rawData.url}'> <p>${rawData.name}</p>  </a>
+    ${rawData.description}`
+    $('#projectRender').append(projectRender);
+  }else{
+    educationArr.push(new Projects(rawData));
+    var educationRender =  `<p>${rawData.name}</p>
+    ${rawData.degree}`
+    $('#educationRender').append(educationRender);
   }
 })
 
 $('.fa-bars').click(function(){
   $('.hide').css('display', 'block');
 })
-
-$('#projects').text(projectArr[0].name)
-$('.projectsAnchor').attr('href', projectArr[0].url);
-
-//jquery clone after grab of .template of the div
-//Use the prototype for the template stuff
-// Projects.prototype.toHtml = function () {
-//   if(this.url){
-//
-//   }
-// };
-
-//No changes

@@ -3,6 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.js">  
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://use.fontawesome.com/25669ba756.js"></script>
     <link rel="stylesheet" href="/css/reset.css">
@@ -26,11 +28,13 @@
   <div class="template">
     <section class="hide">
     <h2 class="navbars" >Projects</h2>
-    <a class="projectsAnchor "href="">
-    <p id="projects"></p></a>
+      <section id="projectRender">
+      </section>
     </section>
     <section class="hide">
       <h2 class="navbars"id="eduction">Education</h2>
+        <section id="educationRender">
+        </section>
     </section>
     <section class="hide">
       <h2 class="navbars"id="awards"> Awards and Achievements</h3>

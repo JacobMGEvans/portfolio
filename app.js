@@ -6,6 +6,7 @@ function Projects(projectDataSource) {
   Object.assign(this, projectDataSource)
 }
 
+//not working with handlebars template
 dataSource.forEach(function(rawData) {
   if(rawData.url){
     projectArr.push(new Projects(rawData))

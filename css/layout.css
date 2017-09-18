@@ -23,8 +23,10 @@ h2{
 
 @media only screen {
 #show{
+  font-size: large;
   position: relative;
-  left: 1vw;
+  left: 84vw;
+  }
 }
 .hide {
   display: none;
@@ -32,20 +34,27 @@ h2{
 .template {
   text-align: center;
 }
+.centerAll {
+  position: relative;
+  bottom: 30vw;
+}
 }
 
-@media only screen and (min-width: 800px) {
-.fa-bars {
+@media only screen and (min-width: 700px) {
+.fa-bars, #show {
   display: none;
+  visibility: hidden;
 }
 
-.hide {
-  display: block;
-}
 
 .template {
   text-align: center;
   position: relative;
   bottom: 35vw;
+}
+.centerAll {
+  display: block;
+  position: relative;
+  bottom: 30vw;
 }
 }

@@ -27,7 +27,8 @@ Projects.prototype.toHtml = function (rawData) {
 };
 
 $('.fa-bars').click(function(){
-  $('.hide').css('display', 'block');
+  $('#projectTemplate').toggle();
+  $('#awTemp').toggle();
 })
 projectArr.forEach(function(project){
   $('#projectTemplate').append(project.toHtml());

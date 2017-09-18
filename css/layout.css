@@ -9,31 +9,38 @@ h1{
   bottom: 43vw;
   right: -33vw;
 }
+
 #backgroundImageId {
   width: 100vw;
   max-width: 100vw;
 }
+
 h2{
   text-align: center;
 }
+
 #show{
   position: relative;
   left: 17vw;
 }
 
 @media only screen {
+
 #show{
   font-size: large;
   position: relative;
   left: 84vw;
   }
 }
+
 .hide {
   display: none;
 }
-.template {
+
+.proTemplate, .awardTemplate, .centerAll {
   text-align: center;
 }
+
 .centerAll {
   position: relative;
   bottom: 30vw;
@@ -41,17 +48,18 @@ h2{
 }
 
 @media only screen and (min-width: 700px) {
+
 .fa-bars, #show {
   display: none;
   visibility: hidden;
 }
-
 
 .template {
   text-align: center;
   position: relative;
   bottom: 35vw;
 }
+
 .centerAll {
   display: block;
   position: relative;

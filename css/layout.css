@@ -19,17 +19,12 @@ h2{
   text-align: center;
 }
 
-#show{
-  position: relative;
-  left: 17vw;
-}
 
 @media only screen {
 
-#show{
-  font-size: large;
+.fa-bars, #show{
   position: relative;
-  left: 84vw;
+  left: 5vw;
   }
 }
 
@@ -50,8 +45,7 @@ h2{
 @media only screen and (min-width: 700px) {
 
 .fa-bars, #show {
-  display: none;
-  visibility: hidden;
+  display: none!important;
 }
 
 .template {

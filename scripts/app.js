@@ -1,6 +1,6 @@
 'use strict';
 
-var projectArr = [], awardsArr = [];
+let projectArr = [], awardsArr = [];
 
 function Projects(projectDataSource) {
   Object.assign(this, projectDataSource)
@@ -14,15 +14,15 @@ dataSource.forEach(function(rawData) {
   }
 })
 
-var rawTemplateHTML = $('.proTemplate').html();
-var compiledTemplate = Handlebars.compile(rawTemplateHTML);
-var templateHTML = $('.awardTemplate').html();
-var compTemplate = Handlebars.compile(templateHTML);
+let rawTemplateHTML = $('.proTemplate').html();
+let compiledTemplate = Handlebars.compile(rawTemplateHTML);
+let templateHTML = $('.awardTemplate').html();
+let compTemplate = Handlebars.compile(templateHTML);
 
 Projects.prototype.toHtml = function (rawData) {
-  var fillHTML = compiledTemplate(new Projects(this));
+  let fillHTML = compiledTemplate(new Projects(this));
   $('#projectTemplate').append(fillHTML);
-  var fillHtml2 = compTemplate(new Projects(this));
+  let fillHtml2 = compTemplate(new Projects(this));
   $('#awTemp').append(fillHtml2);
 };
 

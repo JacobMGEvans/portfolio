@@ -29,6 +29,8 @@ Projects.prototype.toHtml = function (rawData) {
 $('.fa-bars').click(function(){
   $('.hide').css('display', 'block');
 })
+
+})
 projectArr.forEach(function(project){
   $('#projectTemplate').append(project.toHtml());
 })
@@ -41,3 +43,4 @@ $('#projects').click(function(){
 $('#awards').click(function(){
   $('#awTemp').toggle();
 })
+

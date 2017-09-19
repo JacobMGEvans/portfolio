@@ -23,3 +23,9 @@ h2{
 #show:active{
   color: #730202;
 }
+#projectTemplate{
+  display: none;
+}
+#awTemp{
+  display: none;
+}

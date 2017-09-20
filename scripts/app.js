@@ -18,6 +18,7 @@ Projects.prototype.toHtml = function (rawData) {
   $('#awTemp').append(fillHtml2);
 };
 
+//Express and Node server stuff TODO:
 $.get('data/biographyData.json',function(databaseData){
   databaseData.forEach(function(info){
     (info.url) ? projectArr.push(new Projects(info)) :

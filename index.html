@@ -8,23 +8,26 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://use.fontawesome.com/25669ba756.js"></script>
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/modules.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/base.css">
     <title>Jacob's Portfolio</title>
   </head>
   <body>
     <header>
-      <h1>Jacob Michael-Glenn Evans Portfolio</h1>
+      <h1>Jacob Michael-Glenn Evans Portfolio
+        <a href="https://github.com/Cloud887"><i class="fa fa-github-alt" aria-hidden="true" class="biggerIcon"></i></a>
+        <a href="https://www.linkedin.com/in/jacob-evans-b018b365/"><i class="fa fa-linkedin-square" aria-hidden="true" class="biggerIcon"></i></a>
+        <i id='show' class="fa fa-bars" aria-hidden="true" class="biggerIcon"></i>
+      </h1>
         <nav>
-          <a href="https://github.com/Cloud887"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/jacob-evans-b018b365/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <i id='show' class="fa fa-bars" aria-hidden="true"></i>
+
         <!-- //home button and about me button -->
         </nav>
         <img src="images/landscape.jpg" alt="background image" id="backgroundImageId">
         <img src="images/Drumming Bside.jpg" alt="drumming" id="drummingId">
     </header>
-    <div id='projects'>
+    <div id='projects' class="centerAll">
       <h2>Projects</h2>
       <div id="projectTemplate"></div>
     </div>
@@ -34,7 +37,7 @@
       <p id='description'>{{{description}}}</p>
     </div>
   </script>
-  <div id='awards'>
+  <div id='awards' class="centerAll">
     <h2>Awards</h2>
     <div id="awTemp"></div>
   </div>
@@ -44,6 +47,5 @@
     </div>
   </script>
   </body>
-  <script type="text/javascript" src="projects.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
 </html>

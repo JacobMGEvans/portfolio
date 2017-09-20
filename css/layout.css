@@ -9,43 +9,54 @@ h1{
   bottom: 43vw;
   right: -33vw;
 }
+
 #backgroundImageId {
   width: 100vw;
   max-width: 100vw;
 }
+
 h2{
   text-align: center;
 }
-#show{
-  position: relative;
-  left: 17vw;
-}
+
 
 @media only screen {
-#show{
+
+.fa-bars, #show{
   position: relative;
-  left: 1vw;
+  left: 5vw;
+  }
 }
+
 .hide {
   display: none;
 }
-.template {
+
+.proTemplate, .awardTemplate, .centerAll {
   text-align: center;
 }
+
+.centerAll {
+  position: relative;
+  bottom: 30vw;
+}
 }
 
-@media only screen and (min-width: 800px) {
-.fa-bars {
-  display: none;
-}
+@media only screen and (min-width: 700px) {
 
-.hide {
-  display: block;
+.fa-bars, #show {
+  display: none!important;
 }
 
 .template {
   text-align: center;
   position: relative;
   bottom: 35vw;
+}
+
+.centerAll {
+  display: block;
+  position: relative;
+  bottom: 30vw;
 }
 }

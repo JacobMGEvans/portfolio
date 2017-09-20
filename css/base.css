@@ -3,7 +3,7 @@
 }
 
 h1{
-  font-size: 5vw;
+  font-size: 4.5vw;
 }
 
 #drummingId {
@@ -13,11 +13,17 @@ h1{
 }
 
 h2{
-  font-size: 3.5vw;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.biggerIcon{
+font-size: 5vw;
+width: 5vw;
 }
 
 #show{
-  font-size: 3vw;
+  font-size: 4.5vw;
 }
 
 #show:active{

@@ -1,47 +1,51 @@
 'use strict';
+var app = app || {};
 
-let projectArr = [], awardsArr = [];
-let rawTemplateHTML = $('.proTemplate').html();
-let compiledTemplate = Handlebars.compile(rawTemplateHTML);
-let templateHTML = $('.awardTemplate').html();
-let compTemplate = Handlebars.compile(templateHTML);
+(function(module) {
 
-function Projects(projectDataSource) {
-  Object.assign(this, projectDataSource)
-}
+  let projectArr = [], awardsArr = [];
+  let rawTemplateHTML = $('.proTemplate').html();
+  let compiledTemplate = Handlebars.compile(rawTemplateHTML);
+  let templateHTML = $('.awardTemplate').html();
+  let compTemplate = Handlebars.compile(templateHTML);
+
+  function Projects(projectDataSource) {
+    Object.assign(this, projectDataSource)
+  }
 
 
-Projects.prototype.toHtml = function (rawData) {
-  let fillHTML = compiledTemplate(this);
-  $('#projectTemplate').append(fillHTML);
-  let fillHtml2 = compTemplate(this);
-  $('#awTemp').append(fillHtml2);
-};
+  Projects.prototype.toHtml = function (rawData) {
+    let fillHTML = compiledTemplate(this);
+    $('#projectTemplate').append(fillHTML);
+    let fillHtml2 = compTemplate(this);
+    $('#awTemp').append(fillHtml2);
+  };
 
-//Express and Node server stuff TODO:
-$.get('data/biographyData.json',function(databaseData){
-  databaseData.forEach(function(info){
-    (info.url) ? projectArr.push(new Projects(info)) :
-      awardsArr.push(new Projects(info))
+  //Express and Node server stuff TODO:
+  $.get('data/biographyData.json',function(databaseData){
+    databaseData.forEach(function(info){
+      (info.url) ? projectArr.push(new Projects(info)) :
+        awardsArr.push(new Projects(info))
+    })
+    projectArr.forEach(function(project){
+      $('#projectTemplate').append(project.toHtml());
+    })
+
+    awardsArr.forEach(function(award){
+      $('#awTemp').append(award.toHtml());
+    })
   })
-  projectArr.forEach(function(project){
-    $('#projectTemplate').append(project.toHtml());
+
+  $('.fa-bars').on('click', function(){
+    $('#projectTemplate').toggle();
+    $('#awTemp').toggle();
   })
 
-  awardsArr.forEach(function(award){
-    $('#awTemp').append(award.toHtml());
+  $('#projects').on('click', function(){
+    $('#projectTemplate').toggle();
   })
-})
 
-$('.fa-bars').on('click', function(){
-  $('#projectTemplate').toggle();
-  $('#awTemp').toggle();
-})
-
-$('#projects').on('click', function(){
-  $('#projectTemplate').toggle();
-})
-
-$('#awards').on('click', function(){
-  $('#awTemp').toggle();
-})
+  $('#awards').on('click', function(){
+    $('#awTemp').toggle();
+  })
+}());

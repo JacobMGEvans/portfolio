@@ -13,6 +13,9 @@ var app = app || {};
     Object.assign(this, projectDataSource)
   }
 
+  let allArrays = [[projectArr], [awardsArr]].reduce(function(combined, initial) {
+    return combined.concat(initial);
+  })//Add this to the ABOUT ME page once made.
 
   Projects.prototype.toHtml = function (rawData) {
     let fillHTML = compiledTemplate(this);
@@ -21,9 +24,8 @@ var app = app || {};
     $('#awTemp').append(fillHtml2);
   };
 
-  //Express and Node server stuff TODO:
   $.get('data/biographyData.json',function(databaseData){
-    databaseData.forEach(function(info){
+    databaseData.map(function(info){
       (info.url) ? projectArr.push(new Projects(info)) :
         awardsArr.push(new Projects(info))
     })
@@ -48,4 +50,5 @@ var app = app || {};
   $('#awards').on('click', function(){
     $('#awTemp').toggle();
   })
-}());
+
+}(app));

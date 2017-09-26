@@ -15,7 +15,7 @@ var app = app || {};
 
   let allArrays = [[projectArr], [awardsArr]].reduce(function(combined, initial) {
     return combined.concat(initial);
-  })//Add this to the ABOUT ME page once made.
+  })
 
   Projects.prototype.toHtml = function (rawData) {
     let fillHTML = compiledTemplate(this);

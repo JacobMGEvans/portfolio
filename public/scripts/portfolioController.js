@@ -14,3 +14,4 @@ var app = app || {};
 
   module.Controller = Controller;
 })(app);
+//something needs to be added here for the repo AJAX BS

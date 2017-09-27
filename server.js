@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 APP.use(EXPRESS.static('public'));
 
 APP.get('/', function(req, res){
-  res.sendFile('index.html', {root: './'});
+  res.sendFile('index.html', {root: './public'});
 })
 
 APP.listen(PORT, function() {

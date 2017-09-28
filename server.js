@@ -1,11 +1,12 @@
 const EXPRESS = require('express');
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
+const CONSTRING = process.env.DATABASE_URL 
 
 APP.use(EXPRESS.static('public'));
 
 APP.get('/', function(req, res){
-  res.sendFile('index.html', {root: './'});
+  res.sendFile('index.html', {root: './public'});
 })
 
 APP.listen(PORT, function() {

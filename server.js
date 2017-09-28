@@ -1,6 +1,7 @@
 const EXPRESS = require('express');
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
+const CONSTRING = process.env.DATABASE_URL 
 
 APP.use(EXPRESS.static('public'));
 

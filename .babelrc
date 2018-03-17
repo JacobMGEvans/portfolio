@@ -1,0 +1,11 @@
+{
+  "presets": ["react", "env", "stage-0"],
+  "plugins": [
+    "transform-class-properties",
+    "transform-async-to-generator",
+    "transform-object-assign",
+    "version-inline",
+    "static-fs",
+    "transform-es3-member-expression-literals"
+  ]
+}

@@ -1,3 +1,13 @@
+
+# Created by https://www.gitignore.io/api/firebase
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+# End of https://www.gitignore.io/api/firebase
+
 # Parcel Ignore Files
 dist
 .cache

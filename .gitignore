@@ -1,12 +1,11 @@
 
 # Created by https://www.gitignore.io/api/firebase
+# Created by https://www.gitignore.io/api/osx,vim,node,linux,windows,visualstudiocode
 
 ### Firebase ###
 .idea
 **/node_modules/*
 **/.firebaserc
-
-# End of https://www.gitignore.io/api/firebase
 
 # Parcel Ignore Files
 dist
@@ -15,7 +14,7 @@ dist
 db
 .env
 node_modules/
-# Created by https://www.gitignore.io/api/osx,vim,node,linux,windows,visualstudiocode
+
 
 ### Linux ###
 *~

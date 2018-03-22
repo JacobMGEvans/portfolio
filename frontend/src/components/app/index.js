@@ -5,6 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 
+import About from '../about';
+import Landing from '../landing'
+
 class App extends PureComponent {
   render() {
     return (

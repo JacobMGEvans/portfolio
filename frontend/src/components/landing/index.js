@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+import { Button } from 'material-ui'; 
 
 import Navigation from '../navigation'
 
-const Landing = () => {
+class Landing extends Component{
   
-  <Navigation />
+  render(){
+    return(
+    <Button variant="raised" color="primary">
+      Home Page! 
+    </Button>
+    )
+  }
 }
 
 export default Landing

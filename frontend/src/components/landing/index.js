@@ -4,3 +4,11 @@ import {
   Route,
 } from 'react-router-dom';
 
+import Navigation from '../navigation'
+
+const Landing = () => {
+  
+  <Navigation />
+}
+
+export default Landing

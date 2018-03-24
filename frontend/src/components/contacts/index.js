@@ -22,7 +22,7 @@ const Content = ({ toggle, backgroundColor, fill, rotate, scale, shape }) => (
   </a.div>
 )
 
-class App extends React.Component {
+class Contacts extends React.Component {
   state = { toggle: true }
   toggle = () => this.setState(state => ({ toggle: !state.toggle }))
   render() {
@@ -45,4 +45,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+export default Contacts

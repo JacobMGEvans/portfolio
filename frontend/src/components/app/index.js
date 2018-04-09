@@ -6,8 +6,12 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Dashboard '../dashboard'
+import Dashboard from '../dashboard'
 import About from '../about'
+
+if(true){
+    console.log('App component')
+}
 
 class App extends Component {
   render() {

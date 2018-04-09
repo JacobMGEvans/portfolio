@@ -5,5 +5,7 @@ class dashboard extends Component{
         super(props, context);
         
     }
-    
+ 
 }
+
+export default dashboard

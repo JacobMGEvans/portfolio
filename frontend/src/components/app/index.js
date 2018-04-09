@@ -6,8 +6,7 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Navigation from '../navigation';
-import Contacts from '../contacts'
+import Dashboard '../dashboard'
 import About from '../about'
 
 class App extends Component {
@@ -17,9 +16,7 @@ class App extends Component {
       
       <Router>
     <Switch>
-      <Navigation />
-          {/* <Route exact path='/' component={component}/> */}
-         <Route path='/contacts' component={Contacts}/>
+          <Route path='/' component={dashboard}/>
          <Route path='/about' component={About}/>
     </Switch>
       </Router>

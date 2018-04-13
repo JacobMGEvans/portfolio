@@ -5,7 +5,16 @@ class dashboard extends Component{
         super(props, context);
         
     }
+
  
+ render() {
+     return (
+         <div>
+            <nav>This will be the Nav bar</nav>
+             
+         </div>
+     );
+ }
 }
 
 export default dashboard

@@ -16,8 +16,8 @@ class dashboard extends Component {
 
         <div>Summary and Bio will go here</div>
         <div>
-          <button>Click Button</button>
-          <section />
+          <button onClick="show the text">Click Button</button>
+          <section>Will have Text here</section>
         </div>
       </div>
     );

@@ -1,23 +1,20 @@
 import React, { PureComponent } from 'react';
 
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class About extends PureComponent {
-  constructor(props) {
-    super(props);
-    // May use constructor, not sure yet.
-    // something to do with getting twitter streaming in the page.
-    // something to do with getting GitHub on the page
-  }
-
   // Add Image preferably a few at least one professional headshot.
   //
   render() {
     return (
-      <div>Something about Me</div>
+      // need a headshot or just use the same one I have been using.
+      <div>
+        <img src="" alt="" />
+        <div>
+          Something about Me. The Skills, Projects, ect. will
+          <Link /> using some anchor to the text or images.
+        </div>
+      </div>
     );
   }
 }

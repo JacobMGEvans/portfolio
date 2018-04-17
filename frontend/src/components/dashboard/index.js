@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
-class dashboard extends Component {
+import { RaisedButton } from 'material-ui';
+
+class Dashboard extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state({
+    this.state = {
       toggled: false,
-    });
+      text: '',
+    };
   }
 
   render() {
@@ -26,24 +29,10 @@ class dashboard extends Component {
                 maxWidth: 960,
                 padding: '1.45rem 1.0875rem',
               }}
-            >
-              <h1 style={{ margin: 0 }}>
-                <Link
-                  to="/"
-                  style={{
-                    color: 'white',
-                    textDecoration: 'none',
-                  }}
-                >
-                  Gatsby
-                </Link>
-              </h1>
-            </div>
+            />
           </div>
 
           <div>Summary and Bio will go here</div>
-
-          <button onClick="show the text">Click Button</button>
           <section>Will have Text here</section>
         </div>
       </div>
@@ -51,4 +40,4 @@ class dashboard extends Component {
   }
 }
 
-export default dashboard;
+export default Dashboard;

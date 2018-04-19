@@ -42,7 +42,6 @@ class Dashboard extends Component {
             />
           </div>
 
-          <div>Summary and Bio will go here</div>
           <section>Will have Text here</section>
         </div>
       </div>

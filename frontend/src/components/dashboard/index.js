@@ -10,6 +10,16 @@ class Dashboard extends Component {
       toggled: false,
       text: '',
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ event: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
   }
 
   render() {
@@ -19,7 +29,7 @@ class Dashboard extends Component {
         <div>
           <div
             style={{
-              background: 'rebeccapurple',
+              background: 'blue',
               marginBottom: '1.45rem',
             }}
           >

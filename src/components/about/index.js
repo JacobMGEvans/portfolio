@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import { BrowserRouter as Link } from 'react-router-dom';
 
-class About extends PureComponent {
+export default class About extends PureComponent {
   // Add Image preferably a few at least one professional headshot.
   //
   render() {
@@ -13,11 +13,9 @@ class About extends PureComponent {
         <div>
           Something about Me. The Skills, Projects, ect. will
           <div>Summary and Bio will go here</div>
-          <Link /> using some anchor to the text or images.
+          using some anchor to the text or images.
         </div>
       </div>
     );
   }
 }
-
-export default About;

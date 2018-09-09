@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Dashboard from '../dashboard';
+import Skills from '../skills';
 import About from '../about';
 
-if (true) {
-  console.log('App component');
-}
-
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <Switch>
-          <Route path="/" component={Dashboard} />
+          <Route path="/" component={Skills} />
           <Route path="/about" component={About} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
-
-export default App;

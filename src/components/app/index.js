@@ -8,6 +8,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          {/* HOME PAGE NEEDED */}
           <Route path="/about" component={About} />
         </Switch>
       </BrowserRouter>

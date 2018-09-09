@@ -1,0 +1,52 @@
+{
+    "name": "portfolio",
+    "private": true,
+    "engines": {
+      "node": ">=10.0.0"
+    },
+    "scripts": {
+      "start": "node index.js",
+      "watch": "parcel index.html",
+      "clean": "rm -rf .cache dist",
+      "pristine": "rm -rf .cache node_modules dist yarn.lock",
+      "build": "parcel build index.html --public-url ./",
+      "heroku-postbuild": "yarn build"
+    },
+    "dependencies": {
+      "@material-ui/core": "^3.0.1",
+      "babel-core": "^6.26.3",
+      "express": "^4.16.3",
+      "parcel-bundler": "^1.9.7",
+      "parcel-plugin-inlinesvg": "^0.0.14",
+      "react": "^16.4.1",    
+      "react-dom": "^16.4.1",
+      "react-loading": "^2.0.3",
+      "react-router": "^4.2.0",
+      "react-router-dom": "^4.2.2"  
+    },
+    "devDependencies": {
+      "babel-eslint": "^9.0.0",
+      "babel-plugin-static-fs": "^1.1.0",
+      "babel-plugin-stylus-compiler": "^1.4.0",
+      "babel-plugin-transform-async-to-generator": "^6.24.1",
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "babel-plugin-transform-css-import-to-string": "^0.0.2",
+      "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+      "babel-plugin-transform-es3-property-literals": "^6.22.0",
+      "babel-plugin-transform-object-assign": "^6.22.0",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-plugin-version-inline": "^1.0.0",
+      "babel-preset-env": "^1.7.0",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-react": "^6.24.1",
+      "babel-preset-stage-0": "^6.24.1",
+      "eslint": "^5.5.0",
+      "eslint-config-airbnb": "^17.1.0",
+      "eslint-plugin-babel": "^5.1.0",
+      "eslint-plugin-import": "^2.14.0",
+      "eslint-plugin-jsx-a11y": "^6.1.1",
+      "eslint-plugin-react": "^7.11.1",
+      "node-sass": "^4.9.3",  
+      "parcel-plugin-compress": "^1.0.6"
+    }
+  }

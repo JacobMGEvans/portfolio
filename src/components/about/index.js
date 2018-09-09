@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 
-import { BrowserRouter as Link } from 'react-router-dom';
+import Skills from '../skills';
 
 export default class About extends PureComponent {
   // Add Image preferably a few at least one professional headshot.
@@ -11,6 +11,9 @@ export default class About extends PureComponent {
       <div>
         <img src="" alt="" />
         <div>
+          <Fragment>
+            <Skills />
+          </Fragment>
           Something about Me. The Skills, Projects, ect. will
           <div>Summary and Bio will go here</div>
           using some anchor to the text or images.

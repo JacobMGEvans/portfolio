@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-import { RaisedButton } from 'material-ui';
 
 export default class Skills extends Component {
-  state = {
-    toggled: false,
-    text: '',
-  };
-
   handleChange(event) {
     this.setState({ event: event.target.value });
-  }
+  } // IN HERE FOR A FORM TO ADD AND REMOVE SKILLS
 
   handleSubmit(event) {
     event.preventDefault();
   }
 
   render() {
+    // WILL USE FIREBASE FOR SKILLS TEMP DATA:
     const skills = [
       'Javascript',
       'React',

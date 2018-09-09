@@ -7,13 +7,12 @@
   "scripts": {
     "start": "node index.js",
     "watch": "parcel index.html",
-    "clean": "rm -rf .cache dist",
+    "clean": "rm -rf .cache dist node_modules",
     "pristine": "rm -rf .cache node_modules dist yarn.lock",
     "build": "parcel build index.html --public-url ./",
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0",
     "@material-ui/core": "^3.0.1",
     "express": "^4.16.3",
     "material-ui": "^0.20.2",
@@ -51,11 +50,6 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
-    "babel-plugin-object-rest-spread": "^0.0.0",
-    "babel-plugin-static-fs": "^1.1.0",
-    "babel-plugin-stylus-compiler": "^1.4.0",
-    "babel-plugin-transform-css-import-to-string": "^0.0.2",
-    "babel-plugin-version-inline": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.2.0",

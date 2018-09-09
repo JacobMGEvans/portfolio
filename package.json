@@ -12,6 +12,9 @@
     "build": "parcel build index.html --public-url ./",
     "heroku-postbuild": "yarn build"
   },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
   "dependencies": {
     "@material-ui/core": "^3.0.1",
     "express": "^4.16.3",
@@ -49,7 +52,6 @@
     "@babel/plugin-transform-property-literals": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.2.0",

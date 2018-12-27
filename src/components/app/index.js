@@ -10,6 +10,7 @@ export default class App extends Component {
         <Switch>
           {/* HOME PAGE NEEDED */}
           <Route path="/about" component={About} />
+          <Route path="/skills" component={Skills} />
         </Switch>
       </BrowserRouter>
     );

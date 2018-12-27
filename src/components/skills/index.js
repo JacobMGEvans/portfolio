@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 export default class Skills extends Component {
-  handleChange(event) {
-    this.setState({ event: event.target.value });
+  handleChange(e) {
+    this.setState({});
   } // IN HERE FOR A FORM TO ADD AND REMOVE SKILLS
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
@@ -18,13 +18,14 @@ export default class Skills extends Component {
       'jQuery',
       'Express',
       'Firebase',
+      'GraphQL'
     ];
     return (
-      <div>
-        {skills.map(skill => (
-          <ul>{skill}</ul>
+      <Fragment>
+        {skills.map((skill, ind) => (
+          <ul key={`${ind * Math.random()} `}>{skill}</ul>
         ))}
-      </div>
+      </Fragment>
     );
   }
 }

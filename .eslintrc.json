@@ -10,6 +10,7 @@
     "polyfills": ["fetch"]
   },
   "rules": {
+    "quotes": [2, "backticks"],
     "react/forbid-prop-types": [0],
     "react/no-unused-prop-types": [0],
     "react/jsx-filename-extension": [0],

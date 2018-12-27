@@ -1,60 +1,42 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment, lazy, Suspense } from 'react';
 
-import Skills from '../skills';
+const RenderSocialIcons = lazy(() => import('../social-icons'));
+const Skills = lazy(() => import('../skills'));
 
-export default class About extends PureComponent {
+export default class About extends Component {
+  state = {
+    display: false
+  };
   // Add Image preferably a few at least one professional headshot.
   //
+  handleClick = () => {
+    const { display } = this.state;
+    this.setState({ display: !display });
+  };
+
   render() {
+    const { handleClick } = this;
+    const { display } = this.state;
+
     return (
       // need a headshot or just use the same one I have been using.
-      <div>
-        <img src="" alt="" />
+      <Suspense fallback={<div>...Loading</div>}>
         <div>
-          <Fragment>
-            <Skills />
-          </Fragment>
-          Something about Me. The Skills, Projects, ect. will
-          <div>Summary and Bio will go here</div>
-          using some anchor to the text or images.
+          <img src="" alt="" />
+          <div>
+            <Fragment>
+              <button onClick={handleClick}>Skills</button>
+              {display ? <Skills /> : null}
+            </Fragment>
+            <section>
+              Something about Me. The Skills, Projects, ect. will
+              <main>Summary and Bio will go here</main>
+              using some anchor to the text or images.
+              <RenderSocialIcons />
+            </section>
+          </div>
         </div>
-
-        <div>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Twitter">
-            Twitter
-          </a>
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-          is licensed by
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            target="_blank">
-            CC 3.0 BY
-          </a>
-        </div>
-
-        <div>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Linkedin">
-            Linkedin
-          </a>
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-          is licensed by
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            target="_blank">
-            CC 3.0 BY
-          </a>
-        </div>
-      </div>
+      </Suspense>
     );
   }
 }

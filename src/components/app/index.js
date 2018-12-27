@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import About from '../about';
+import Skills from '../skills';
 
 export default class App extends Component {
   render() {

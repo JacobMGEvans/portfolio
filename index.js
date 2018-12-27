@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 
 express()
   .use(express.static(`${__dirname}/dist`))

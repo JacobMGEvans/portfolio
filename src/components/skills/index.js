@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 export default class Skills extends Component {
   handleChange(e) {
+    e.preventDefault();
     this.setState({});
   } // IN HERE FOR A FORM TO ADD AND REMOVE SKILLS
 

@@ -1,7 +1,5 @@
-import React from 'react';
-import SVG from 'react-inlinesvg';
-
-import twitterLogo from '../../assets/images/Twitter_Logo_Blue.svg';
+import React from "react";
+import SVG from "react-inlinesvg";
 
 const RenderSocialIcons = () => (
   <section>

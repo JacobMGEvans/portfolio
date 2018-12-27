@@ -1,12 +1,15 @@
-import React, { Component, Fragment, lazy, Suspense } from 'react';
+import React, {
+  Component, Fragment, lazy, Suspense,
+} from "react";
 
-const RenderSocialIcons = lazy(() => import('../social-icons'));
-const Skills = lazy(() => import('../skills'));
+const RenderSocialIcons = lazy(() => import(`../social-icons`));
+const Skills = lazy(() => import(`../skills`));
 
 export default class About extends Component {
   state = {
-    display: false
+    display: false,
   };
+
   // Add Image preferably a few at least one professional headshot.
   //
   handleClick = () => {

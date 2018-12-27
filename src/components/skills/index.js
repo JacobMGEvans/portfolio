@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 
 export default class Skills extends Component {
   handleChange(e) {
@@ -12,13 +12,13 @@ export default class Skills extends Component {
   render() {
     // WILL USE FIREBASE FOR SKILLS TEMP DATA:
     const skills = [
-      'Javascript',
-      'React',
-      'Node',
-      'jQuery',
-      'Express',
-      'Firebase',
-      'GraphQL'
+      `Javascript`,
+      `React`,
+      `Node`,
+      `jQuery`,
+      `Express`,
+      `Firebase`,
+      `GraphQL`,
     ];
     return (
       <Fragment>

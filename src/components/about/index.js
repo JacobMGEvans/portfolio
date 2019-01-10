@@ -2,13 +2,17 @@ import React, {
   Component, Fragment, lazy, Suspense,
 } from "react";
 
-import RenderSocialIcons from "../social-icons";
+import SVGInline from "react-svg-inline";
+
+import twitterLogo from "../../assets/images/Twitter_Logo_Blue.svg";
+import linkedInLogo from "../../assets/images/iconmonstr-linkedin-3.svg";
 
 const Skills = lazy(() => import(`../skills`));
 
 export default class About extends Component {
   state = {
     display: false,
+    socialIcons: [twitterLogo, linkedInLogo],
   };
 
   // Add Image preferably a few at least one professional headshot.
@@ -20,7 +24,7 @@ export default class About extends Component {
 
   render() {
     const { handleClick } = this;
-    const { display } = this.state;
+    const { display, socialIcons } = this.state;
 
     return (
       // need a headshot or just use the same one I have been using.
@@ -37,7 +41,9 @@ export default class About extends Component {
               <main>Summary and Bio will go here</main>
               using some anchor to the text or images.
             </section>
-            <RenderSocialIcons />
+            {socialIcons.map(icon => (
+              <SVGInline svg={icon} />
+            ))}
           </div>
         </div>
       </Suspense>

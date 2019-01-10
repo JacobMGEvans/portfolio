@@ -2,7 +2,8 @@ import React, {
   Component, Fragment, lazy, Suspense,
 } from "react";
 
-const RenderSocialIcons = lazy(() => import(`../social-icons`));
+import RenderSocialIcons from "../social-icons";
+
 const Skills = lazy(() => import(`../skills`));
 
 export default class About extends Component {
@@ -35,8 +36,8 @@ export default class About extends Component {
               Something about Me. The Skills, Projects, ect. will
               <main>Summary and Bio will go here</main>
               using some anchor to the text or images.
-              <RenderSocialIcons />
             </section>
+            <RenderSocialIcons />
           </div>
         </div>
       </Suspense>

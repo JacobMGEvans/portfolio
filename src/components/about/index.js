@@ -1,9 +1,7 @@
 import React, {
   Component, Fragment, lazy, Suspense,
 } from "react";
-
 import SVGInline from "react-svg-inline";
-
 import twitterLogo from "../../assets/images/Twitter_Logo_Blue.svg";
 import linkedInLogo from "../../assets/images/iconmonstr-linkedin-3.svg";
 
@@ -15,8 +13,6 @@ export default class About extends Component {
     socialIcons: [twitterLogo, linkedInLogo],
   };
 
-  // Add Image preferably a few at least one professional headshot.
-  //
   handleClick = () => {
     const { display } = this.state;
     this.setState({ display: !display });

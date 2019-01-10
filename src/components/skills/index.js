@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from "react";
 
 export default class Skills extends Component {
+  state = {
+    firstName: ``,
+  };
+
   handleChange(e) {
     e.preventDefault();
     this.setState({});
@@ -16,10 +20,12 @@ export default class Skills extends Component {
       `Javascript`,
       `React`,
       `Node`,
-      `jQuery`,
       `Express`,
       `Firebase`,
       `GraphQL`,
+      `MongoDB`,
+      `HTML5`,
+      `CSS3`,
     ];
     return (
       <Fragment>

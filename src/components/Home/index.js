@@ -1,15 +1,9 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
 
 export default class Home extends Component {
   render() {
     return (
-      <Fragment>
-        <header>
-          <nav>
-            <Link to="/about"> About </Link>
-          </nav>
-        </header>
+      <section>
         <h1>Jacob M-G Evans</h1>
         <h2>
           Full-Stack JavaScript Developer | Air Force Veteran | Hardware
@@ -31,7 +25,7 @@ export default class Home extends Component {
           </p>
           <aside>PROJECTS ASIDE</aside>
         </main>
-      </Fragment>
+      </section>
     );
   }
 }

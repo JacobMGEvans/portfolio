@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 export default class Skills extends Component {
   state = {
@@ -28,11 +28,11 @@ export default class Skills extends Component {
       `CSS3`,
     ];
     return (
-      <Fragment>
+      <section>
         {skills.map((skill, ind) => (
           <ul key={`${ind * Math.random()} `}>{skill}</ul>
         ))}
-      </Fragment>
+      </section>
     );
   }
 }

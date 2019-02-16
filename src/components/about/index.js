@@ -1,20 +1,14 @@
-import React, {
-  Component, Fragment, lazy, Suspense,
-} from "react";
-import SVGInline from "react-svg-inline";
-import twitterLogo from "../../assets/images/Twitter_Logo_Blue.svg";
-import linkedInLogo from "../../assets/images/iconmonstr-linkedin-3.svg";
+import React, { Component, lazy, Suspense } from "react";
+
+import jacobImage from "../../assets/images/jacobPortrait.jpg";
+
+import style from "./style";
 
 const Skills = lazy(() => import(`../skills`));
 
 export default class About extends Component {
   state = {
     display: false,
-    socialImages: [twitterLogo, linkedInLogo],
-    socialLinks: [
-      `https://twitter.com/JacobMGEvans?lang=en`,
-      `https://www.linkedin.com/in/jacob-m-g-evans/`,
-    ],
   };
 
   handleClick = () => {
@@ -24,25 +18,24 @@ export default class About extends Component {
 
   render() {
     const { handleClick } = this;
-    const { display, socialImages, socialLinks } = this.state;
-
+    const { display } = this.state;
+    const { imageContainer } = style;
     return (
-      // need a headshot or just use the same one I have been using.
       <Suspense fallback={<div>...Loading</div>}>
         <section>
-          <img src="" alt="self-portrait" />
+          <img
+            src={jacobImage}
+            alt="self-portrait"
+            style={{ ...imageContainer }}
+          />
           <div>
             <aside>
+              ASIDE
               <button onClick={handleClick}>Skills</button>
               {display ? <Skills /> : null}
             </aside>
 
             <p>Something about Me. The Skills, Projects</p>
-            {socialImages.map((render, ind) => (
-              <a href={socialLinks[ind]} key={ind + Math.random()}>
-                <SVGInline svg={socialImages[ind]} key={ind + Math.random()} />
-              </a>
-            ))}
           </div>
         </section>
       </Suspense>

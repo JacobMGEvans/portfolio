@@ -10,7 +10,11 @@ const Skills = lazy(() => import(`../skills`));
 export default class About extends Component {
   state = {
     display: false,
-    socialIcons: [twitterLogo, linkedInLogo],
+    socialImages: [twitterLogo, linkedInLogo],
+    socialLinks: [
+      `https://twitter.com/JacobMGEvans?lang=en`,
+      `https://www.linkedin.com/in/jacob-m-g-evans/`,
+    ],
   };
 
   handleClick = () => {
@@ -20,28 +24,27 @@ export default class About extends Component {
 
   render() {
     const { handleClick } = this;
-    const { display, socialIcons } = this.state;
+    const { display, socialImages, socialLinks } = this.state;
 
     return (
       // need a headshot or just use the same one I have been using.
       <Suspense fallback={<div>...Loading</div>}>
-        <div>
-          <img src="" alt="" />
+        <section>
+          <img src="" alt="self-portrait" />
           <div>
-            <Fragment>
+            <aside>
               <button onClick={handleClick}>Skills</button>
               {display ? <Skills /> : null}
-            </Fragment>
-            <section>
-              Something about Me. The Skills, Projects, ect. will
-              <main>Summary and Bio will go here</main>
-              using some anchor to the text or images.
-            </section>
-            {socialIcons.map(icon => (
-              <SVGInline svg={icon} />
+            </aside>
+
+            <p>Something about Me. The Skills, Projects</p>
+            {socialImages.map((render, ind) => (
+              <a href={socialLinks[ind]} key={ind + Math.random()}>
+                <SVGInline svg={socialImages[ind]} key={ind + Math.random()} />
+              </a>
             ))}
           </div>
-        </div>
+        </section>
       </Suspense>
     );
   }

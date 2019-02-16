@@ -16,7 +16,7 @@ export default class Home extends Component {
           Enthusiast | Outdoorsman
         </h2>
 
-        <section>
+        <main>
           <p>
             As a Developer, I am an ambitious individual that seeks
             opportunities that foster my growth and experience as a software
@@ -29,7 +29,8 @@ export default class Home extends Component {
             hardware enthusiast. JavaScipt, NodeJS, ExpressJS, MongoDB, ReactJS,
             SCSS, CSS3, HTML, SQL, etc...
           </p>
-        </section>
+          <aside>PROJECTS ASIDE</aside>
+        </main>
       </Fragment>
     );
   }

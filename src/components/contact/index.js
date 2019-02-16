@@ -6,6 +6,7 @@ export default class Contact extends Component {
     lastName: ``,
     phone: ``,
     email: ``,
+    comment: ``,
   };
 
   handleChange(e) {
@@ -18,23 +19,43 @@ export default class Contact extends Component {
 
   render() {
     const { handleChange, handleSubmit } = this;
+    const {
+      firstName, lastName, phone, email, comment,
+    } = this.state;
     return (
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="firstName"
           placeholder="First Name!"
-          value={this.state.firstName}
-          onChange={this.handleChange.bind(this)}
+          value={firstName}
+          onChange={handleChange}
         />
-
         <input
           type="text"
           name="lastName"
           placeholder="Last Name!"
-          value={this.state.lastName}
-          onChange={this.handleChange.bind(this)}
+          value={lastName}
+          onChange={handleChange}
         />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          value={email}
+          onChange={handleChange}
+        />
+        <label>
+          Comment:
+          <textarea value={comment} onChange={handleChange} />
+        </label>
       </form>
     );
   }

@@ -16,12 +16,16 @@ export default class Footer extends Component {
   };
 
   render() {
-    const { socialContainer } = style;
+    const { socialContainer, icons } = style;
     const { socialImages, socialLinks } = this.state;
     return (
       <footer style={{ ...socialContainer }}>
         {socialImages.map((render, ind) => (
-          <a href={socialLinks[ind]} key={ind + Math.random()}>
+          <a
+            href={socialLinks[ind]}
+            key={ind + Math.random()}
+            style={{ ...icons }}
+          >
             <SVGInline svg={socialImages[ind]} key={ind + Math.random()} />
           </a>
         ))}

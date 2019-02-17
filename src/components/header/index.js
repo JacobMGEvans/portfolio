@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from "@reach/router";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <header>
-        <nav>
-          <Link to="/about"> About </Link>
-        </nav>
-      </header>
-    );
-  }
-}
+const Header = () => (
+  <header>
+    <nav>
+      <Link to="/about"> About </Link>
+      <Link to="/"> Home </Link>
+    </nav>
+  </header>
+);
+
+export default Header;

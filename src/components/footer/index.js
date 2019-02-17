@@ -4,6 +4,7 @@ import SVGInline from "react-svg-inline";
 import twitterLogo from "../../assets/images/Twitter_Logo_Blue.svg";
 import linkedInLogo from "../../assets/images/iconmonstr-linkedin-3.svg";
 
+import ContactForm from "../contact-form";
 import style from "./style";
 
 export default class Footer extends Component {
@@ -29,6 +30,7 @@ export default class Footer extends Component {
             <SVGInline svg={socialImages[ind]} key={ind + Math.random()} />
           </a>
         ))}
+        <ContactForm />
       </footer>
     );
   }

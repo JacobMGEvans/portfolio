@@ -1,11 +1,32 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { Button } from "@material-ui/core";
+import styles from "./style";
 
+const { root, textStyle, banner } = styles;
 const Header = () => (
-  <header>
+  <header style={{ border: `.2vw solid red`, ...banner }}>
     <nav>
-      <Link to="/about"> About </Link>
-      <Link to="/"> Home </Link>
+      <Link to="/" style={{ ...textStyle }}>
+        <Button
+          variant="contained"
+          style={{
+            ...root,
+          }}
+        >
+          Home
+        </Button>
+      </Link>
+      <Link to="/about" style={{ ...textStyle }}>
+        <Button
+          variant="contained"
+          style={{
+            ...root,
+          }}
+        >
+          About
+        </Button>
+      </Link>
     </nav>
   </header>
 );

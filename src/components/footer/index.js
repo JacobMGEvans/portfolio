@@ -17,10 +17,10 @@ export default class Footer extends Component {
   };
 
   render() {
-    const { socialContainer, icons } = style;
+    const { socialContainer, icons, mainContainer } = style;
     const { socialImages, socialLinks } = this.state;
     return (
-      <footer style={{ ...socialContainer }}>
+      <footer style={{ ...socialContainer, ...mainContainer }}>
         {socialImages.map((render, ind) => (
           <a
             href={socialLinks[ind]}

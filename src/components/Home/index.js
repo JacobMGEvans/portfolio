@@ -3,14 +3,14 @@ import React, { Component } from "react";
 export default class Home extends Component {
   render() {
     return (
-      <section>
-        <h1>Jacob M-G Evans</h1>
-        <h2>
+      <section style={{ border: `.2vw solid black` }}>
+        <h1 style={{ border: `.2vw solid green` }}>Jacob M-G Evans</h1>
+        <h2 style={{ border: `.2vw solid orange` }}>
           Full-Stack JavaScript Developer | Air Force Veteran | Hardware
           Enthusiast | Outdoorsman
         </h2>
 
-        <main>
+        <main style={{ border: `.2vw solid goldenrod` }}>
           <p>
             As a Developer, I am an ambitious individual that seeks
             opportunities that foster my growth and experience as a software
@@ -23,7 +23,8 @@ export default class Home extends Component {
             hardware enthusiast. JavaScipt, NodeJS, ExpressJS, MongoDB, ReactJS,
             SCSS, CSS3, HTML, SQL, etc...
           </p>
-          <aside>PROJECTS ASIDE</aside>
+
+          <aside style={{ border: `.2vw solid blue` }}>PROJECTS ASIDE</aside>
         </main>
       </section>
     );

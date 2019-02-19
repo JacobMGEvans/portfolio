@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "watch": "parcel index.html",
-    "clean": "rm -rf .cache dist node_modules",
+    "clean": "rm -rf dist",
     "pristine": "rm -rf .cache node_modules dist yarn.lock",
     "build": "parcel build index.html --public-url ./",
     "heroku-postbuild": "yarn build"

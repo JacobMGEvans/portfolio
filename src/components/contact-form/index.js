@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextField } from "material-ui/TextField";
 import styles from "./style";
 
 const ContactForm = ({ styleProps }) => {
@@ -16,9 +17,10 @@ const ContactForm = ({ styleProps }) => {
   const { mainContainer } = styles;
   return (
     <form onSubmit={handleSubmit} style={{ ...styleProps, mainContainer }}>
-      <label htmlFor="first name">
+      <label htmlFor="firstname">
         First Name:
         <input
+          id="firstname"
           type="text"
           name="firstName"
           placeholder="First Name!"
@@ -26,9 +28,10 @@ const ContactForm = ({ styleProps }) => {
           onChange={e => setFirstName(e.target.value)}
         />
       </label>
-      <label htmlFor="last name">
+      <label htmlFor="lastname">
         Last Name:
         <input
+          id="lastname"
           type="text"
           name="lastName"
           placeholder="Last Name!"
@@ -37,8 +40,9 @@ const ContactForm = ({ styleProps }) => {
         />
       </label>
       Phone Number:
-      <label htmlFor="phone number">
+      <label htmlFor="phone-number">
         <input
+          id="phone-number"
           type="text"
           name="phone"
           placeholder="Phone Number"
@@ -49,6 +53,7 @@ const ContactForm = ({ styleProps }) => {
       <label htmlFor="email">
         Email:
         <input
+          id="email"
           type="text"
           name="email"
           placeholder="Email"

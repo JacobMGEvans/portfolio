@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+// temp hard code projects ADD PICTURES OR SOMETHING
+const Projects = {
+  "Twitter Bot": `https://github.com/JacobMGEvans/twitter-bot-rtl`,
+  "Machine Learning Sound": `https://github.com/IntelliSound/intelliSound-Client`,
+  "Naive Blockchain Implementation": `https://github.com/HashMoney/Noncents`,
+};
 export default class Home extends Component {
   render() {
     return (
@@ -24,7 +30,11 @@ export default class Home extends Component {
             SCSS, CSS3, HTML, SQL, etc...
           </p>
 
-          <aside style={{ border: `.2vw solid blue` }}>PROJECTS ASIDE</aside>
+          <aside style={{ border: `.2vw solid blue` }}>
+            {Object.entries(Projects).map((ele, ind) => (
+              <ul key={ind + Math.random()}>{`${ele[0]} : ${ele[1]} `}</ul>
+            ))}
+          </aside>
         </main>
       </section>
     );

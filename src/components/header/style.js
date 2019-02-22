@@ -10,6 +10,8 @@ const styles = {
   },
   banner: {
     background: `linear-gradient(45deg, #5495ff 30%, #000d72 90%)`,
+    height: `6vh`,
+    margin: `auto`,
   },
   navContainer: { display: `flex`, justifyContent: `flex-end` },
   homeButton: {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import styles from "./style";
 
-const ContactForm = () => {
+const ContactForm = ({ styleProps }) => {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
   const [phone, setPhone] = useState(``);
@@ -12,8 +13,9 @@ const ContactForm = () => {
     console.log(firstName, lastName, phone, email, comment);
   };
 
+  const { mainContainer } = styles;
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ ...styleProps, mainContainer }}>
       <label htmlFor="first name">
         First Name:
         <input

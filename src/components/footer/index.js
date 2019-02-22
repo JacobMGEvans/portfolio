@@ -30,7 +30,7 @@ export default class Footer extends Component {
             <SVGInline svg={socialImages[ind]} key={ind + Math.random()} />
           </a>
         ))}
-        <ContactForm />
+        <ContactForm styleProps={{ border: `.2vw solid black` }} />
       </footer>
     );
   }

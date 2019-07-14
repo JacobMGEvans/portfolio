@@ -15,8 +15,8 @@ const Skills = () => {
   ];
   return (
     <section>
-      {skills.map((skill, ind) => (
-        <ul key={`${ind * Math.random()} `}>{skill}</ul>
+      {skills.map(skill => (
+        <ul key={Date.now() * Math.random()}>{skill}</ul>
       ))}
     </section>
   );

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "./style";
 // temp hard code projects ADD PICTURES OR SOMETHING
 const Projects = {
+  Porjects: ``,
   "Twitter Bot": [`https://github.com/JacobMGEvans/twitter-bot-rtl`],
   "Machine Learning Sound": [
     `https://github.com/IntelliSound/intelliSound-Client`,

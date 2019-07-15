@@ -8,10 +8,6 @@ const Skills = lazy(() => import(`../skills`));
 const About = () => {
   const [display, setDisplay] = useState(false);
 
-  const handleClick = () => {
-    setDisplay({ display: !display });
-  };
-
   const { imageContainer } = style;
   return (
     <Suspense fallback={<div>...Loading</div>}>
@@ -24,7 +20,7 @@ const About = () => {
         <div>
           <aside>
             ASIDE
-            <button onClick={handleClick}>Skills</button>
+            <button onClick={() => setDisplay(!display)}>Skills</button>
             {display ? <Skills /> : null}
           </aside>
           <p>Something about Me. The Skills, Projects</p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import styles from "./style";
 
+//! Use Formik instead
 const ContactForm = ({ styleProps }) => {
   const [firstName, setFirstName] = useState(``);
   const [lastName, setLastName] = useState(``);
